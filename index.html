@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.12.4];shiny[1.2.0]</script>
+<script src="shared/json2-min.js"></script>
+<script src="shared/jquery.min.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.min.js"></script>  <meta charset="utf-8">
+  <title>building Shiny Apps</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+  <body>
+    <div id="headerui">
+      <header id="header" class="header header-hide">
+        <div class="container">
+          <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <a href="#body"><img src="img/logo.jpg" alt="" title="" /></a>
+      </div>
+          <nav id="nav-menu-container">
+            <ul class="nav-menu">
+          <li class="menu-active"><a href="#simpleui">Home</a></li>
+          <li><a href="#mod_titleui">Intro</a></li>
+          <li><a href="#mod_titleui2">The Challenge</a></li>
+          <li><a href="#mod_titleui3">Step by step</a></li>
+          <li><a href="#mod_titleui4">Tools</a></li>
+          <li><a href="#footerui">About</a></li></ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <div id="simpleui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div>
+            <img src="img/bigapps.jpg"/>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="mod_titleui">
+      <section id="hero" class="wow fadeIn">
+        <div class="hero-container">
+          <h1>Building Big Shiny Apps</h1>
+          <h2>A Workflow</h2>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_leftui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-3">
+              <img src="img/shiny-hex.png"/>
+            </div>
+            <div class="col-md-7 col-lg-5"><h2>What&#39;s a <span>Shiny App</span>?</h2>
+
+<p>Shiny is a framework for <strong>building web applications</strong> that can communicate with R. <strong>No knowledge of HTML, CSS or JavaScript</strong> is required. </p>
+
+<h3>On the plus side:</h3>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Easy to use</li>
+  <li><i class="fa fa-angle-right"></i> Fast for prototype</li>
+</ul>
+
+<h3>On the down side:</h3>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Can get tricky for big apps</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="simpleui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div>
+            <img src="img/simpleapp.png"/>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_left_switchedui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5"><h2>What&#39;s a <strong>BIG</strong> Shiny Apps?</h2>
+
+<p>Shiny is perfect if you need to create Data Science prototypes rapidly. </p>
+
+<p>It can also be used in production, but it then becomes more complex.</p>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Millions of lines of code</li>
+  <li><i class="fa fa-angle-right"></i> Several coders</li>
+  <li><i class="fa fa-angle-right"></i> Potentially numerous users</li>
+  <li><i class="fa fa-angle-right"></i> Scaling matters</li>
+  <li><i class="fa fa-angle-right"></i> Users who are not &ldquo;coders&rdquo;</li>
+</ul>
+</div>
+            <div class="col-md-5 col-lg-3">
+              <img src="img/shiny-hex.png"/>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="mod_titleui2">
+      <section id="hero" class="wow fadeIn">
+        <div class="hero-container">
+          <h1>Building Big Shiny Apps</h1>
+          <h2>The Challenges</h2>
+        </div>
+      </section>
+    </div>
+    <div id="mod_split_threeui">
+      <section id="get-started" class="padd-section text-center wow fadeInUp">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2>What are the challenges?</h2>
+            <p class="separator"></p>
+          </div>
+        </div>
+        <div class="container">
+          <div>
+            <div class="row">
+              <div class="col-md-6 col-lg-4">
+                <div class="feature-block">
+                  <img src="img/svg/planet.svg" class="img-fluid"/>
+                  <h4>Finding a Good User interface</h4>
+                  <h4>(and stick with it)</h4>
+                  <p>Simplicity is the key.</p>
+                  <blockquote>'Simplicity is the most difficult thing to secure in this world.'</blockquote>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="feature-block">
+                  <img src="img/svg/asteroid.svg" class="img-fluid"/>
+                  <h4>Working simultaneously on the same app</h4>
+                  <p>Adopt an app structure and choose tools that will allow multiple peoples to work safely (and efficiently) on the same application.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="feature-block">
+                  <img src="img/svg/cloud.svg" class="img-fluid"/>
+                  <h4>Making it Production Ready</h4>
+                  <p>Create an app that is robustly tested, maintainable, and deployable into production.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_leftui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-3">
+              <img src="img/users-solid.svg"/>
+            </div>
+            <div class="col-md-7 col-lg-5"><h2>Building a Good User Interface</h2>
+
+<p>A big Shiny app might be used by people who are not &ldquo;tech literate&rdquo;, and need a simple, easy to use and easy to understand application.</p>
+
+<h3>How to do that?</h3>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Simplicity is the key</li>
+  <li><i class="fa fa-angle-right"></i> Do what&rsquo;s necessary, no more, no less</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_left_switchedui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5"><h2>Developping as a Team</h2>
+
+<p>Building a big shiny app means that several coders will work on that app. Choose tools and structure that will fit collaborative work.</p>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Use version control.</li>
+  <li><i class="fa fa-angle-right"></i> Split your app into pieces so that everybody can work on his own piece (Shiny modules).</li>
+</ul>
+</div>
+            <div class="col-md-5 col-lg-3">
+              <img src="img/sitemap-solid.svg"/>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_leftui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-3">
+              <img src="img/expand-arrows-alt-solid.svg"/>
+            </div>
+            <div class="col-md-7 col-lg-5"><h2>Scale Big Shiny Apps</h2>
+
+<p>Most of the time, building a big Shiny App means that it will be scaled to numerous users, that it will be used for a (relatively) long time, and that you might implement new things on it in the future.</p>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> JavaScript can make the app lighter (don&rsquo;t make R do things it doesn&rsquo;t need to do).</li>
+  <li><i class="fa fa-angle-right"></i> {future} and {promises} are your friends.</li>
+  <li><i class="fa fa-angle-right"></i> Using modules allow to implement new things more easily in the future.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_left_switchedui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5"><h2>Maintain</h2>
+
+<p>Once your app is in production, you need to make it maintainable.</p>
+
+<p>Making a software maintainable is:</p>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Using modules make the application easier to maintain: &ldquo;bite size&rdquo; pieces of code are easier to understand on monolithic, 1000s of lines long files (even more if you need to pass this application to someone else in the future.</li>
+  <li><i class="fa fa-angle-right"></i> Create regression tests so that the application doesn&rsquo;t suddenly break.</li>
+  <li><i class="fa fa-angle-right"></i> Ensure R & package stability over time (notably: the version numbers).</li>
+</ul>
+</div>
+            <div class="col-md-5 col-lg-3">
+              <img src="img/clock-regular.svg"/>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="mod_titleui3">
+      <section id="hero" class="wow fadeIn">
+        <div class="hero-container">
+          <h1>Building Big Shiny Apps</h1>
+          <h2>Step by step</h2>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_leftui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-3">
+              <img src="img/pencil-alt-solid.svg"/>
+            </div>
+            <div class="col-md-7 col-lg-5"><h2><span>Design</span></h2>
+
+<p><strong>Don&#39;t rush into coding the app</strong>. </p>
+
+<p>Start simple: maybe just with a pen and a piece of paper. Draw the app here, and define the content. </p>
+
+<p>Rmd are your friends.</p>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Will help you think about the content</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_left_switchedui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5"><h2><span>Prototye</span></h2>
+
+<p>Go &ldquo;UI first&rdquo; - define the outline of the app, whithout focusing on the backend. </p>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Will freeze the app content and fonctionalities.</li>
+  <li><i class="fa fa-angle-right"></i> Can help you see potential pitfalls before it&rsquo;s too late.</li>
+  <li><i class="fa fa-angle-right"></i> Once this UI prototype is agreed upon, everybody know where the app is going.</li>
+</ul>
+
+<p>The {shinypsum} package has been especially created for that: <a href="https://github.com/ThinkR-open/shinipsum">https://github.com/ThinkR-open/shinipsum</a>. See also {fakir}: <a href = "https://github.com/ThinkR-open/fakir">https://github.com/ThinkR-open/fakir</a>.</p>
+</div>
+            <div class="col-md-5 col-lg-3">
+              <img src="img/drafting-compass-solid.svg"/>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_leftui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-3">
+              <img src="img/tools-solid.svg"/>
+            </div>
+            <div class="col-md-7 col-lg-5"><h2><span>Build</span></h2>
+
+<p>Now that the UI is designed, time for building the hardcore backend. </p>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Create the R code that processes the app inputs.</li>
+  <li><i class="fa fa-angle-right"></i> Now, there should be no &ldquo;surprise implementations&rdquo; as everything has been fixed by the prototyping phase.</li>
+  <li><i class="fa fa-angle-right"></i> As a team, it&rsquo;s easier to see where everyone is going.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_left_switchedui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5"><h2><span>Secure</span></h2>
+
+<p>Use continuous integration and tests.</p>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Allow to check the app on every push to the version control system.</li>
+  <li><i class="fa fa-angle-right"></i> Don&rsquo;t implement things that breaks the app.</li>
+  <li><i class="fa fa-angle-right"></i> It&rsquo;s hard to test Big Apps: there are a lot of scenarios and they might be long to perform. Don&rsquo;t loose time doing it by hand.</li>
+</ul>
+</div>
+            <div class="col-md-5 col-lg-3">
+              <img src="img/lock-solid.svg"/>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="split_img_leftui">
+      <section id="about-us" class="about-us padd-section wow fadeInUp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-3">
+              <img src="img/share-square-solid.svg"/>
+            </div>
+            <div class="col-md-7 col-lg-5"><h2><span>Deploy</span></h2>
+
+<p>You can&#39;t just put the app on a server and run it as is. </p>
+
+<ul class="list-unstyled">
+  <li><i class="fa fa-angle-right"></i> Docker</li>
+  <li><i class="fa fa-angle-right"></i> Shiny Proxy</li>
+  <li><i class="fa fa-angle-right"></i> RStudio Server</li>
+  <li><i class="fa fa-angle-right"></i> RStudio Connect</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="mod_titleui4">
+      <section id="hero" class="wow fadeIn">
+        <div class="hero-container">
+          <h1>Building Big Shiny Apps</h1>
+          <h2>Tools</h2>
+        </div>
+      </section>
+    </div>
+    <div id="featureui">
+      <section id="features" class="padd-section text-center wow fadeInUp">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2>Tools</h2>
+            <p class="separator">What do I need?</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-block">
+                <img src="img/package.png" alt="img" class="img-fluid"/>
+                <h4>Package</h4>
+                <p>Building your app as a package allows you to make your application self-contained, with documentation, dependencies, tests, and to be served in any R session.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-block">
+                <img src="img/png/git.png" alt="img" class="img-fluid"/>
+                <h4>Git</h4>
+                <p>Git is a version control system that allows people to collaborate on code by tracking changes, and allows to work together on the same project but in different branches.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-block">
+                <img src="img/png/module.png" alt="img" class="img-fluid"/>
+                <h4>Shiny Modules</h4>
+                <p>Using Shiny Modules allows to work on small, self contained features. Everybody can then work on their own module. It also allows to implement or remove feature easily.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-block">
+                <img src="img/png/lorem_ipsum.jpg" alt="img" class="img-fluid"/>
+                <h4>shinipsum</h4>
+                <p>The {shinipsum} package allows to create random shiny UI elements so that it's easy to prototype an application interface. See also {fakir} for fake datasets.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-block">
+                <img src="img/thinkr-hex-golem.png" alt="img" class="img-fluid"/>
+                <h4>golem</h4>
+                <p>{golem} is the future version of <a href = "">{shinytemplate}</a>, a package providing a template for robust shiny apps, with a series of tools for integrating new elements to the application.</p>
+                <p>(We're still working on it).</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-block">
+                <img src="img/svg/paint-palette.svg" alt="img" class="img-fluid"/>
+                <h4>CI &amp; testing</h4>
+                <p>Several tools exist to do continous integration: gitlab CI, travis, appveyor...</p>
+                <p>The {testthat} package is also used to test the code of the "business logic" functions from the Shiny App.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-block">
+                <img src="img/vial-solid.svg" alt="img" class="img-fluid"/>
+                <h4>Testing</h4>
+                <p>Find a reliable testing environment for stable / scalable application</p>
+                <p>{shinytest} / {katalon} / {shinyload}</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-block">
+                <img src="img/docker.png" alt="img" class="img-fluid"/>
+                <h4>Docker / Shinyproxy / Shiny server / connect</h4>
+                <p>These tools allows you to scale your Shiny Application, so that it can be used by hundreds of people.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="footerui"><footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">THINKR</a>
+            <p>ThinkR is French company focused on everything R-related.
+
+            We are specialized in anything that can be linked to R: software engineering, infrastructure, shiny applications and deployment, training...
+
+            We also have a strong commitment to the Open Source community..</p>
+
+           </div>
+           </div>
+
+           <div class="col-sm-6 col-md-3 col-lg-2">
+           <div class="list-menu">
+
+           <h4>MORE ABOUT US</h4>
+
+           <ul class="list-unstyled">
+           <li><a href="https://thinkr.fr">https://thinkr.fr</a></li>
+           <li><a href="https://rtask.thinkr.fr">https://rtask.thinkr.fr</a></li>
+           <li><a href="https://github.com/ThinkR-open">https://github.com/ThinkR-open</a></li>
+           <li><a href="https://twitter.com/Thinkr_FR">https://twitter.com/Thinkr_FR</a></li>
+           </ul>
+
+           </div>
+           </div>
+
+           </div>
+           </div>
+
+           <div class="copyrights">
+           <div class="container">
+           <h4>About the HTML template</h4>
+           <p>&copy; Copyrights eStartup. All rights reserved.</p>
+           <div class="credits">
+           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+           </div>
+           </div>
+           </div>
+
+           </footer></div>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/modal-video/js/modal-video.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
