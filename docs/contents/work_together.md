@@ -1,4 +1,4 @@
-## Developping as a Team
+## Developing as a Team
 
 Building a big shiny app means that several coders will work on that app. So choose tools and structure that will fit collaborative work.
 
